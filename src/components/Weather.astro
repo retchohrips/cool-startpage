@@ -1,0 +1,69 @@
+---
+import config from "../data/config.json";
+const scale = config.weather?.scale ?? "F";
+const location = config.weather?.location;
+---
+
+<h2 id="weather" data-location={location}>
+  It is <span id="temp">0</span>°<span id="scale" data-scale={scale}>F</span>.
+</h2>
+<script>
+  // Get location from astro data
+  const location = document.getElementById("weather").dataset.location;
+  // Change url dependent on location in config
+  const url = location
+    ? `https://wttr.in/${location}?format=j1`
+    : `https://wttr.in/?format=j1`;
+  // Get scale from astro data
+  const scale = document.getElementById("scale").dataset.scale;
+
+  async function getWeather() {
+    // Create a variable to cache data, if the url and scale are the same
+    const cacheKey = `weatherData-${url}-${scale}`;
+    // Get data from localStorage
+    const cachedData = localStorage.getItem(cacheKey);
+    // Current time for outdated cache check
+    const currentTime = Date.now();
+
+    // Check if cached data exists and is not older than 1 hour
+    if (
+      cachedData &&
+      currentTime - JSON.parse(cachedData).timestamp < 3600000
+    ) {
+      // Use cached data if not older than 1 hour
+      return JSON.parse(cachedData);
+    } else {
+      // If cache too old or no cache
+      const response = await fetch(url);
+      const json = await response.json();
+
+      // Extract data from fetched JSON
+      const temperature = parseInt(json.current_condition[0]["temp_" + scale]);
+      const condition =
+        json.current_condition[0].weatherDesc[0].value.toLowerCase();
+      const locationFound = json.nearest_area[0].areaName[0].value;
+
+      // Compile data together
+      const data = {
+        temperature,
+        condition,
+        locationFound,
+        timestamp: currentTime,
+      };
+
+      // Cache the data
+      localStorage.setItem(cacheKey, JSON.stringify(data));
+
+      return data;
+    }
+  }
+
+  const weatherData = await getWeather();
+
+  // Deconstruct returned data
+  const { temperature, condition, locationFound } = weatherData;
+
+  // Change HTML
+  document.getElementById("temp").innerText = temperature;
+  document.getElementById("scale").innerText = scale;
+</script>

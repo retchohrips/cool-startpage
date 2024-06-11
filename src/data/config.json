@@ -1,0 +1,61 @@
+{
+  "title": "New Tab",
+  "colors": {
+    "background": "#303446",
+    "foreground": "#c6d0f5",
+    "comment": "#737994",
+    "link": "#babbf1",
+    "highlight": "#8caaee"
+  },
+  "weather": { "scale": "F" },
+  "categories": [
+    {
+      "name": "life",
+      "links": [
+        { "name": "calendar", "url": "https://calendar.google.com" },
+        { "name": "gmail", "url": "https://mail.google.com" }
+      ]
+    },
+    {
+      "name": "social",
+      "links": [
+        { "name": "blåhaj-zone", "url": "https://blahaj.zone" },
+        { "name": "cohost", "url": "https://cohost.org" },
+        { "name": "reddit", "url": "https://reddit.com" },
+        { "name": "toyhouse", "url": "https://toyhou.se" },
+        { "name": "tumblr", "url": "https://tumblr.com" },
+        { "name": "pinterest", "url": "https://pinterest.com" }
+      ]
+    },
+    {
+      "name": "media",
+      "links": [
+        { "name": "ao3", "url": "https://archiveofourown.org" },
+        { "name": "lofi-atc", "url": "https://www.lofiatc.com/" },
+        {
+          "name": "musicforprogramming",
+          "url": "https://musicforprogramming.net/"
+        },
+        { "name": "youtube", "url": "https://youtube.com" }
+      ]
+    },
+    {
+      "name": "dev",
+      "links": [
+        { "name": "exercism", "url": "https://exercism.org" },
+        { "name": "freecodecamp", "url": "https://freecodecamp.org" },
+        { "name": "frontend mentor", "url": "https://frontendmentor.io" },
+        { "name": "github", "url": "https://github.com" },
+        { "name": "scrimba", "url": "https://scrimba.com" }
+      ]
+    },
+    {
+      "name": "chatbots",
+      "links": [
+        { "name": "gemini", "url": "https://gemini.google.com" },
+        { "name": "claude", "url": "https://claude.ai" },
+        { "name": "big-agi", "url": "https://coolagi.vercel.app" }
+      ]
+    }
+  ]
+}
