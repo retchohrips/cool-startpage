@@ -1,11 +1,20 @@
 ---
-import config from "../data/config.json";
+interface Config {
+  weather?: {
+    scale?: string;
+    location?: string;
+  };
+}
+
+import data from "../data/config.json";
+const config: Config = data;
 const scale = config.weather?.scale ?? "F";
 const location = config.weather?.location;
 ---
 
 <h2 id="weather" data-location={location}>
-  It is <span id="temp">0</span>°<span id="scale" data-scale={scale}>F</span>.
+  It is <span id="temp">0</span>°<span id="scale" data-scale={scale}>F</span> in
+  <span id="location">location</span>.
 </h2>
 <script>
   // Get location from astro data
@@ -39,14 +48,14 @@ const location = config.weather?.location;
 
       // Extract data from fetched JSON
       const temperature = parseInt(json.current_condition[0]["temp_" + scale]);
-      const condition =
-        json.current_condition[0].weatherDesc[0].value.toLowerCase();
+      // const condition =
+      //   json.current_condition[0].weatherDesc[0].value.toLowerCase();
       const locationFound = json.nearest_area[0].areaName[0].value;
 
       // Compile data together
       const data = {
         temperature,
-        condition,
+        // condition,
         locationFound,
         timestamp: currentTime,
       };
@@ -61,9 +70,11 @@ const location = config.weather?.location;
   const weatherData = await getWeather();
 
   // Deconstruct returned data
-  const { temperature, condition, locationFound } = weatherData;
+  // condition is currently unused
+  const { temperature, locationFound } = weatherData;
 
   // Change HTML
   document.getElementById("temp").innerText = temperature;
   document.getElementById("scale").innerText = scale;
+  document.getElementById("location").innerText = locationFound;
 </script>
