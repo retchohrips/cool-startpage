@@ -1,6 +1,7 @@
 ---
 import config from "../data/config.json";
 import Weather from "../components/Weather.astro";
+import Greeting from "../components/Greeting.astro";
 
 const bgColor = config.colors?.background ?? "#303446";
 const fgColor = config.colors?.foreground ?? "#c6d0f5";
@@ -18,8 +19,7 @@ const highlightColor = config.colors?.highlight ?? "#8caaee";
     <title>{config.title ?? "New Tab"}</title>
   </head>
   <body>
-    <!-- Greeting -->
-    <h1>;; ʕ•ᴥ•ʔ <span style="font-size: 0.5em">Greetings!</span></h1>
+    <Greeting />
     <Weather />
     {
       config.categories.map(

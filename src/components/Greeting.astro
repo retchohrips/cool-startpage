@@ -1,0 +1,25 @@
+---
+import config from "../data/config.json";
+---
+
+<h1>
+  ;; {config.kaomoji}
+  <span id="greeting" style="font-size: 0.5em">Hi!</span>
+</h1>
+
+<script>
+  const getGreeting = (): string => {
+    const currentTime = new Date();
+    const currentHour = currentTime.getHours();
+
+    switch (true) {
+      case currentHour < 12:
+        return "Good morning!";
+      case currentHour >= 12 && currentHour < 17:
+        return "Good afternoon!";
+      default:
+        return "Good evening!";
+    }
+  };
+  document.getElementById("greeting").innerText = getGreeting();
+</script>
