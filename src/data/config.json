@@ -45,7 +45,7 @@
       "links": [
         { "name": "exercism", "url": "https://exercism.org" },
         { "name": "freecodecamp", "url": "https://freecodecamp.org" },
-        { "name": "frontend mentor", "url": "https://frontendmentor.io" },
+        { "name": "frontend-mentor", "url": "https://frontendmentor.io" },
         { "name": "github", "url": "https://github.com" },
         { "name": "scrimba", "url": "https://scrimba.com" }
       ]
