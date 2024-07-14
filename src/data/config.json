@@ -20,12 +20,12 @@
     {
       "name": "social",
       "links": [
-        { "name": "blåhaj-zone", "url": "https://blahaj.zone" },
         { "name": "cohost", "url": "https://cohost.org" },
         { "name": "reddit", "url": "https://reddit.com" },
         { "name": "toyhouse", "url": "https://toyhou.se" },
         { "name": "tumblr", "url": "https://tumblr.com" },
-        { "name": "pinterest", "url": "https://pinterest.com" }
+        { "name": "pinterest", "url": "https://pinterest.com" },
+        { "name": "tech-lgbt", "url": "https://tech.lgbt" }
       ]
     },
     {
@@ -55,7 +55,7 @@
       "links": [
         { "name": "gemini", "url": "https://gemini.google.com" },
         { "name": "claude", "url": "https://claude.ai" },
-        { "name": "big-agi", "url": "https://coolagi.vercel.app" }
+        { "name": "cool-agi", "url": "https://coolagi.vercel.app" }
       ]
     }
   ]
