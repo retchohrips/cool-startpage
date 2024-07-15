@@ -54,8 +54,7 @@
       "name": "chatbots",
       "links": [
         { "name": "gemini", "url": "https://gemini.google.com" },
-        { "name": "claude", "url": "https://claude.ai" },
-        { "name": "cool-agi", "url": "https://coolagi.vercel.app" }
+        { "name": "claude", "url": "https://claude.ai" }
       ]
     }
   ]
