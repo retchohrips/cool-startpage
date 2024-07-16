@@ -4,57 +4,61 @@
     "background": "#303446",
     "foreground": "#c6d0f5",
     "comment": "#737994",
-    "link": "#babbf1",
     "highlight": "#8caaee"
   },
   "weather": { "scale": "F" },
   "kaomoji": "૮ • ﻌ - ა",
   "categories": [
     {
-      "name": "life",
+      "name": "google",
       "links": [
-        { "name": "calendar", "url": "https://calendar.google.com" },
-        { "name": "gmail", "url": "https://mail.google.com" }
+        { "name": "Calendar", "url": "https://calendar.google.com" },
+        { "name": "Gmail", "url": "https://mail.google.com" },
+        { "name": "Maps", "url": "https://maps.google.com" }
       ]
     },
     {
-      "name": "social",
+      "name": "surf",
       "links": [
-        { "name": "cohost", "url": "https://cohost.org" },
-        { "name": "reddit", "url": "https://reddit.com" },
-        { "name": "toyhouse", "url": "https://toyhou.se" },
-        { "name": "tumblr", "url": "https://tumblr.com" },
-        { "name": "pinterest", "url": "https://pinterest.com" },
-        { "name": "tech-lgbt", "url": "https://tech.lgbt" }
+        { "name": "Cohost", "url": "https://cohost.org" },
+        { "name": "Reddit", "url": "https://reddit.com" },
+        { "name": "Toyhouse", "url": "https://toyhou.se" },
+        { "name": "Tumblr", "url": "https://tumblr.com" },
+        { "name": "Pinterest", "url": "https://pinterest.com" },
+        { "name": "Tech.LGBT", "url": "https://tech.lgbt" }
       ]
     },
     {
       "name": "media",
       "links": [
-        { "name": "ao3", "url": "https://archiveofourown.org" },
-        { "name": "lofi-atc", "url": "https://www.lofiatc.com/" },
+        { "name": "Ao3", "url": "https://archiveofourown.org" },
+        { "name": "Lo-fi ATC", "url": "https://www.lofiatc.com/" },
         {
-          "name": "musicforprogramming",
+          "name": "musicForProgramming",
           "url": "https://musicforprogramming.net/"
         },
-        { "name": "youtube", "url": "https://youtube.com" }
+        { "name": "YouTube", "url": "https://youtube.com" }
       ]
     },
     {
       "name": "dev",
       "links": [
-        { "name": "exercism", "url": "https://exercism.org" },
-        { "name": "freecodecamp", "url": "https://freecodecamp.org" },
-        { "name": "frontend-mentor", "url": "https://frontendmentor.io" },
-        { "name": "github", "url": "https://github.com" },
-        { "name": "scrimba", "url": "https://scrimba.com" }
+        { "name": "Exercism", "url": "https://exercism.org" },
+        { "name": "freeCodeCamp", "url": "https://freecodecamp.org" },
+        { "name": "Frontend Mentor", "url": "https://frontendmentor.io" },
+        { "name": "GitHub", "url": "https://github.com" },
+        { "name": "Scrimba", "url": "https://scrimba.com" }
       ]
     },
     {
-      "name": "chatbots",
+      "name": "tools",
       "links": [
-        { "name": "gemini", "url": "https://gemini.google.com" },
-        { "name": "claude", "url": "https://claude.ai" }
+        { "name": "Gemini", "url": "https://gemini.google.com" },
+        { "name": "Claude", "url": "https://claude.ai" },
+        {
+          "name": "Find My Device",
+          "url": "https://www.google.com/android/find/"
+        }
       ]
     }
   ]

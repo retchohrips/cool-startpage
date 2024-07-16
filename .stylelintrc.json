@@ -4,5 +4,7 @@
     "stylelint-config-recess-order",
     "stylelint-config-astro"
   ],
-  "rules": { "custom-property-pattern": null }
+  "rules": {
+    "custom-property-pattern": null
+  }
 }
